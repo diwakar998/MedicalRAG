@@ -1,0 +1,50 @@
+{
+  "D:\\PB_Medical_RAG\\Documents\\cardiovascular_diseases.pdf": {
+    "hash": "92ed8b17fbe6725d473b4d1e3d64650bc5998cb9636d74cb79a3597a5fa68cad"
+  },
+  "D:\\PB_Medical_RAG\\Documents\\critical_care.pdf": {
+    "hash": "f8cb9cf5293798812b2725c59e0cab19c4f89cd7792314cef13e2fce1bf0cd84"
+  },
+  "D:\\PB_Medical_RAG\\Documents\\general_surgery.pdf": {
+    "hash": "7e47b613d379fb3031347bccedd6acec08f7f26f2d4242a0d26110ceb9e64b94"
+  },
+  "D:\\PB_Medical_RAG\\Documents\\hypertension_full.pdf": {
+    "hash": "8388906c4f3ce1beb4355d9c5fcc16f25dd96580532a78a5ab3e27e8f41b49da"
+  },
+  "D:\\PB_Medical_RAG\\Documents\\hypertension_quick_ref.pdf": {
+    "hash": "62de7ccc3b98e5e8b368cdab9abcf3e89cf6f1fe4e8173be6b594d448145cb1b"
+  },
+  "D:\\PB_Medical_RAG\\Documents\\malaria.pdf": {
+    "hash": "3f6e8f9435cbe3671f70aa8ea8c47c18bcd8be23afdf180a8021edb1c914a766"
+  },
+  "D:\\PB_Medical_RAG\\Documents\\npcdcs_manual.pdf": {
+    "hash": "f45a65f2404fdcfcbcf5c3d943942af81c2662d13fa6c34ec77f8c6017acb181"
+  },
+  "D:\\PB_Medical_RAG\\Documents\\obstetrics_gynaecology.pdf": {
+    "hash": "105ef97b460f3f1c8f1232884b65c33739322e753aaaf14422393df741542517"
+  },
+  "D:\\PB_Medical_RAG\\Documents\\oncology.pdf": {
+    "hash": "c8cfc345f482073bc6d80b0d96ae86a2ef8aed0de5a4705c38c450b8f19b6cc8"
+  },
+  "D:\\PB_Medical_RAG\\Documents\\orthopaedics.pdf": {
+    "hash": "87c4822655783fc609eb986b0bfa1dc0ff9033e924a2f06c13ffc680572a67f8"
+  },
+  "D:\\PB_Medical_RAG\\Documents\\paediatrics.pdf": {
+    "hash": "cbe6519dc4cf024682115a42630c4f3d79fd5f2e0a29be32c2760c7eed0ebab7"
+  },
+  "D:\\PB_Medical_RAG\\Documents\\respiratory_medicine.pdf": {
+    "hash": "aba7ab6b814b85867043639d11f0b56efea0c3f385d85abe24addeb2cc690085"
+  },
+  "D:\\PB_Medical_RAG\\Documents\\siddha.pdf": {
+    "hash": "da0dd19de679ff1cde0b07ba4fd00f8942b6e0dfa90c7c4ba81009ce7803e34e"
+  },
+  "D:\\PB_Medical_RAG\\Documents\\snakebite_full.pdf": {
+    "hash": "5b7ea408dade69aae0c9ab8a7536cec29bafbb190586e144bc1066fd8d1e18d9"
+  },
+  "D:\\PB_Medical_RAG\\Documents\\snakebite_quick_ref.pdf": {
+    "hash": "80d500ce992500d8807efafd6864cd3518103caf2e6149755f31fe87be26cda6"
+  },
+  "D:\\PB_Medical_RAG\\Documents\\tb_standards.pdf": {
+    "hash": "39a1e8530dea238f0219284771ebba2eef4796596f1d46ceeeca71bc736c7c8f"
+  }
+}
