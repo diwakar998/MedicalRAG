@@ -1,6 +1,6 @@
 streamlit
 python-dotenv
-
+nicegui
 langchain
 langchain-core
 langchain-openai
@@ -13,4 +13,4 @@ fastembed
 
 sentence-transformers
 pypdf
-nicegui
+
