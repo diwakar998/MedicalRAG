@@ -13,3 +13,4 @@ fastembed
 
 sentence-transformers
 pypdf
+nicegui
