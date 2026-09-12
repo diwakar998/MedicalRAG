@@ -1,0 +1,82 @@
+## Production-ready RAG architecture
+
+### 1. Indexing stage
+
+- Split source documents into smaller **chunks**.
+- Generate **hybrid embeddings** for each chunk, combining semantic/vector signals with keyword-style retrieval signals.
+- Store the chunks and embeddings in **Qdrant VectorDB**.
+
+### 2. Query and retrieval paths
+
+The diagram shows two retrieval approaches:
+
+#### Standard vector retrieval
+
+1. Receive the **user query**.
+2. Generate a **query embedding**.
+3. Search the vector database.
+4. Return the most **relevant chunks**.
+
+#### HyDE retrieval
+
+**HyDE (Hypothetical Document Embeddings)** improves retrieval when the original query is too short, ambiguous, or unlike the indexed text:
+
+1. Receive the user query.
+2. Ask an LLM to generate a **hypothetical answer**.
+3. Embed the hypothetical answer.
+4. Use that embedding to search the vector database.
+5. Retrieve relevant chunks.
+6. Pass the chunks to the LLM to produce the final answer.
+
+### 3. Input guardrails
+
+Classify the query before retrieval. Suggested categories:
+
+- **Allowed**
+- **Diagnosis**
+- **Dosing**
+- **Personalized guidance**
+- **Emergency**
+- **Out of scope**
+
+This classification determines whether the request should proceed, be restricted, or receive a safer response.
+
+### 4. Hybrid search and reranking
+
+1. Run **hybrid search** to combine semantic and lexical retrieval.
+2. Send candidate chunks to a **cross-encoder**.
+3. **Rerank** the chunks using query–chunk relevance scores.
+4. Give the highest-ranked context to the LLM.
+
+The reranker should remove irrelevant results—for example, retaining chunks 1 and 4 while rejecting chunks 2 and 3.
+
+### 5. Answer generation and output guardrails
+
+- The LLM generates an answer from the selected context.
+- **Output guardrails** classify the response as **safe** or **unsafe**.
+- Unsafe responses should be blocked, rewritten, or replaced with an appropriate fallback.
+
+### 6. Retrieval evaluation and correction
+
+After generating the final output:
+
+1. Evaluate whether the answer and retrieved evidence are relevant.
+2. If retrieval quality is insufficient, **correct the retrieval** and run the pipeline again.
+3. CRAG-style evaluation can be used to identify weak or irrelevant context and trigger another retrieval pass.
+
+### Key production components
+
+- Document chunking
+- Hybrid embeddings
+- Qdrant VectorDB
+- Query embedding and vector search
+- HyDE
+- Hybrid search
+- Cross-encoder reranking
+- Input and output guardrails
+- CRAG / corrective retrieval
+- Retrieval and answer relevance evaluation
+
+### End-to-end flow
+
+**Documents → chunking → hybrid embeddings → Qdrant → input classification → query/HyDE retrieval → hybrid search → cross-encoder reranking → LLM → output guardrails → relevance evaluation → corrective retrieval when needed**
