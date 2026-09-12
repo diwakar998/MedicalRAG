@@ -962,9 +962,22 @@ if __name__ == "__main__":
     print(f"Reranker          : {RERANKER_MODEL}")
     print("=" * 60)
 
+'''
     ui.run(
         host="127.0.0.1",
         port=8080,
         title="Medical Advisor",
         reload=False,
     )
+'''
+
+if __name__ == "__main__":
+    port = int(os.getenv("PORT", "8080"))
+
+    ui.run(
+        host="0.0.0.0",
+        port=port,
+        title="Medical Advisor",
+        reload=False,
+    )
+    
